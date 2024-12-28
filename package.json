@@ -1,0 +1,13 @@
+{
+  "name": "my-new-project",
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "@wdio/cli": "^9.4.5",
+    "@wdio/local-runner": "^9.4.5",
+    "@wdio/mocha-framework": "^9.4.4",
+    "@wdio/spec-reporter": "^9.4.4"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js"
+  }
+}
