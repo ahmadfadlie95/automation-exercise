@@ -12,7 +12,7 @@ describe('Register User', () => {
         await $("//a[normalize-space()='Signup / Login']").click()
         const newUserSignUpTitle = await $("//h2[normalize-space()='New User Signup!']")
         await expect(newUserSignUpTitle).toBeDisplayed()
-        await expect(newUserSignUpTitle).toHaveTitle("New User Signup!")
+        await expect(newUserSignUpTitle).toHaveTitle("Automation Exercise - Signup / Login")
     })
 
     it("Sign Up New User", async() => {
@@ -53,5 +53,21 @@ describe('Register User', () => {
         const offerBox = await $("#optin")
         offerBox.click()
         offerBox.isDisplayed()
+    })
+
+    it("Enter Address Information", async() => {
+        await $("#first_name").setValue("Test Name")
+        await $("#last_name").setValue("Test Last")
+        await $("#address1").setValue("Test Address")
+
+        const countryDropdown = $("#country")
+        countryDropdown.selectByVisibleText("Singapore")
+
+        await $("#state").setValue("Tuas South")
+        await $("#city").setValue("Tuas City")
+        await $("#zipcode").setValue("23000")
+        await $("#mobile_number").setValue("0123154151")
+
+        await $("//button[normalize-space()='Create Account']").click()
     })
 })
