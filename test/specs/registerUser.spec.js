@@ -63,6 +63,8 @@ describe('Register User', () => {
         const countryDropdown = $("#country")
         countryDropdown.selectByVisibleText("Singapore")
 
+        //test
+
         await $("#state").setValue("Tuas South")
         await $("#city").setValue("Tuas City")
         await $("#zipcode").setValue("23000")
